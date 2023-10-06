@@ -45,7 +45,7 @@ img {
 
 #controls {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 button {
@@ -72,16 +72,40 @@ button {
     display: none;
     background-color: gold;
     box-shadow: 0px 5px 0px 0px rgb(241, 226, 141);
+    width: 70%;
 }
 
 #play {
     background-color: rgb(137, 214, 22);
     box-shadow: 0px 5px 0px 0px rgb(167, 218, 92);
-    width: 70%;
 }
 
 #reinit {
-    display: none;
     background-color: rgb(255, 0, 0);
     box-shadow: 0px 5px 0px 0px rgb(255, 94, 94)
+}
+
+/*style pour une gauge qui est remplie de façon proportionnelle au temps mis sur le chronomètre*/
+#progress {
+    width: 100%;
+    height: 10px;
+    background-color: rgb(63, 63, 63);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#progress div {
+    height: 100%;
+    border-radius: 5px;
+    background-color: rgb(255, 0, 0);
+    transition: width 1s;
+}
+
+/*style pour le texte qui s'affiche en dessous de la gauge*/
+
+#progress p {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 100%;
 }
