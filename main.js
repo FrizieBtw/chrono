@@ -77,6 +77,12 @@ play.addEventListener('click', () => {
         play.style.display = "none";
         reinit.style.display = "none";
         pause.style.display = "flex";
+        addH.style.display = "none";
+        addM.style.display = "none";
+        addS.style.display = "none";
+        subH.style.display = "none";
+        subM.style.display = "none";
+        subS.style.display = "none";
         interval = setInterval(() => {
             if (seconde > 0) {
                 seconde -= 1;
@@ -94,6 +100,12 @@ play.addEventListener('click', () => {
                         play.style.display = "flex";
                         reinit.style.display = "flex";
                         pause.style.display = "none";
+                        addH.style.display = "flex";
+                        addM.style.display = "flex";
+                        addS.style.display = "flex";
+                        subH.style.display = "flex";
+                        subM.style.display = "flex";
+                        subS.style.display = "flex";
                     }
                 }
             }
@@ -108,6 +120,12 @@ pause.addEventListener('click', () => {
     play.style.display = "flex";
     reinit.style.display = "flex";
     pause.style.display = "none";
+    addH.style.display = "flex";
+    addM.style.display = "flex";
+    addS.style.display = "flex";
+    subH.style.display = "flex";
+    subM.style.display = "flex";
+    subS.style.display = "flex";
     clearInterval(interval);
 });
 
