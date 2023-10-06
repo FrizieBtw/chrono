@@ -84,8 +84,23 @@ play.addEventListener('click', () => {
         subM.style.display = "none";
         subS.style.display = "none";
         interval = setInterval(() => {
+            if (seconde == 1 && minute == 0 && heure == 0) {
+                var audio = new Audio('/effets_sonores/bell.mp3');
+                audio.play();
+                clearInterval(interval);
+                play.style.display = "flex";
+                reinit.style.display = "flex";
+                pause.style.display = "none";
+                addH.style.display = "flex";
+                addM.style.display = "flex";
+                addS.style.display = "flex";
+                subH.style.display = "flex";
+                subM.style.display = "flex";
+                subS.style.display = "flex";
+            }
             if (seconde > 0) {
                 seconde -= 1;
+
             } else {
                 if (minute > 0) {
                     minute -= 1;
@@ -95,17 +110,6 @@ play.addEventListener('click', () => {
                         heure -= 1;
                         minute = 59;
                         seconde = 59;
-                    } else {
-                        clearInterval(interval);
-                        play.style.display = "flex";
-                        reinit.style.display = "flex";
-                        pause.style.display = "none";
-                        addH.style.display = "flex";
-                        addM.style.display = "flex";
-                        addS.style.display = "flex";
-                        subH.style.display = "flex";
-                        subM.style.display = "flex";
-                        subS.style.display = "flex";
                     }
                 }
             }
