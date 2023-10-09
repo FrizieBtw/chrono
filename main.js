@@ -85,7 +85,7 @@ play.addEventListener('click', () => {
         subS.style.display = "none";
         interval = setInterval(() => {
             if (seconde == 1 && minute == 0 && heure == 0) {
-                var audio = new Audio('/effets_sonores/bell.mp3');
+                var audio = new Audio('./effets_sonores/bell.mp3');
                 audio.play();
                 clearInterval(interval);
                 play.style.display = "flex";
